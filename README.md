@@ -60,13 +60,6 @@ FK has `ON DELETE CASCADE`. `PRAGMA foreign_keys = ON` enforced.
 | Battery Voltage | 280–420 V | < 260 or > 450 V |
 | Current Load | 0–350 kW | > 400 kW |
 | Temperature | –20 to 60 °C | > 80 °C |
-
-## Docker
-
-```bash
-make docker
-# Dashboard: http://localhost:8501
-# API docs:  http://localhost:8000/docs
 ```
 
 ## Tests
