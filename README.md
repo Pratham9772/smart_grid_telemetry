@@ -71,7 +71,7 @@ pytest test_pipeline.py -v
 
 ## Streamlit Public Dashboard
 
-Real-time operational monitoring for fleet operations
+Real-time operational monitoring for fleet operations:
 
 Live Dashboard: [https://smartgridtelemetry-yz2zgffjhztgscwcaa3bzw.streamlit.app/]
 
@@ -80,9 +80,9 @@ Live Dashboard: [https://smartgridtelemetry-yz2zgffjhztgscwcaa3bzw.streamlit.app
 
 Executive alert monitoring layer for cross-functional stakeholder reporting:
 
- Live Dashboard: [https://public.tableau.com/app/profile/pratham.chaturvedi6542/viz/Smart-Grid-Telemetry-Critical-Alerts/Dashboard1?publish=yes]
+Live Dashboard: [https://public.tableau.com/app/profile/pratham.chaturvedi6542/viz/Smart-Grid-Telemetry-Critical-Alerts/Dashboard1?publish=yes]
 
- 
+
  Streamlit→ Real-time operational monitoring for fleet operations
  Tableau Public → Executive critical alert trend analysis and threshold breakdown
 
