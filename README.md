@@ -15,13 +15,13 @@ Local data engineering pipeline for electric fleet telemetry. Ingests synthetic 
 
 ## Quick Start
 
-```bash
+
 pip install -r requirements.txt
 pytest test_pipeline.py -v        # run tests
 python pipeline.py                 # run ETL standalone
 streamlit run app.py             # launch dashboard
 uvicorn api:app --reload         # start API
-```
+
 
 ## Pipeline Flow
 
@@ -34,10 +34,10 @@ uvicorn api:app --reload         # start API
 
 ## DB Schema
 
-```
+
 gps_telemetry(gps_id PK, vehicle_id, latitude, longitude, timestamp)
 vehicle_logs(log_id PK, vehicle_id FK, battery_voltage, current_load_kw, temperature_c, timestamp)
-```
+
 
 FK has `ON DELETE CASCADE`. `PRAGMA foreign_keys = ON` enforced.
 
@@ -58,14 +58,31 @@ FK has `ON DELETE CASCADE`. `PRAGMA foreign_keys = ON` enforced.
 | Metric | Safe Range | Critical |
 |--------|-----------|----------|
 | Battery Voltage | 280–420 V | < 260 or > 450 V |
-| Current Load | 0–350 kW | > 400 kW |
-| Temperature | –20 to 60 °C | > 80 °C |
-```
+ Current Load | 0–350 kW | > 400 kW |
+ Temperature | –20 to 60 °C | > 80 °C |
+
 
 ## Tests
 
 5 test cases covering null handling, IQR math verification, threshold flags, DB schema validation, and empty DataFrame edge cases.
 
-```bash
 pytest test_pipeline.py -v
-```
+
+
+## Streamlit Public Dashboard
+
+Real-time operational monitoring for fleet operations
+
+Live Dashboard: [https://smartgridtelemetry-yz2zgffjhztgscwcaa3bzw.streamlit.app/]
+
+
+## Tableau Public Dashboard
+
+Executive alert monitoring layer for cross-functional stakeholder reporting:
+
+ Live Dashboard: [https://public.tableau.com/app/profile/pratham.chaturvedi6542/viz/Smart-Grid-Telemetry-Critical-Alerts/Dashboard1?publish=yes]
+
+ 
+ Streamlit→ Real-time operational monitoring for fleet operations
+ Tableau Public → Executive critical alert trend analysis and threshold breakdown
+
